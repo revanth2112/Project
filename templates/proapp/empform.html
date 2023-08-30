@@ -1,0 +1,36 @@
+{%extends 'proapp/home.html'%}
+
+{% load static %}
+
+{%block body_block%}
+
+<style>
+  button{
+    width: 7%;
+    border-radius: 12px;
+    border-color: #1b03a3;
+    background-color: #1589ff;
+    padding: 12px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  button:hover {
+    background-color: rgb(50, 250, 75);
+    color: rgb(255, 0, 0);
+  }
+</style>
+
+<center>
+  <h1>Employee Form</h1>
+  
+  <form method="POST">
+	{%csrf_token%}
+	{{form.as_p}}
+  <a href="empdata.html"><button>Submit</button></a>
+  </form>
+
+</center>
+
+{%endblock%}

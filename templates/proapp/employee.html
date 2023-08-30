@@ -1,0 +1,29 @@
+{%extends 'proapp/home.html'%}
+
+{% load static %}
+
+{%block body_block%}
+
+<body background="/static/images/a.png">
+
+</body>
+<style>
+  body {
+      background-image: url('/static/images/a.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Optional, prevents scrolling */
+  }
+</style>
+
+<div>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/hr">Hr</a></li>
+      <li><a class="active" href="/employee">Employee</a></li>
+    </ul>
+  </div>
+
+<h3>This is Employee Workspace</h3>
+
+{%endblock%}

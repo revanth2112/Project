@@ -1,0 +1,24 @@
+{%extends 'proapp/home.html'%}
+
+{% load static %}
+
+{%block body_block%}
+
+<div>
+    <ul>
+      <li><a href="/home">Home</a></li>
+      <li><a href="/hr">Hr</a></li>
+      <li><a href="/employee">Employee</a></li>
+      <li class="right"><a href="/signup">Sign Up</a></li>
+      <li class="right"><a href="/accounts/logout">Logout</a></li>
+      <li class="right" ><a href="/accounts/login">Login</a></li>
+    </ul>
+</div>
+
+<center>
+    <h1>
+        Succesfully Logged Out
+    </h1>
+</center>
+
+{%endblock%}

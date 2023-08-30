@@ -1,0 +1,68 @@
+{%extends 'proapp/home.html'%}
+
+{% load static %}
+
+{%block body_block%}
+
+<center>
+	<h3>Employee Data</h3>
+	
+	<table border="2">
+		<thead>
+			<th>Emp Name</th>
+			<th>Emp Id</th>
+			<th>Designation</th>
+			<th>Date of Joining</th>
+			<th>Department</th>
+			<th>Salary Package</th>
+			<th>Experience</th>
+			<th>HR Section</th>
+		</thead>
+	
+		{% for e in employees %}
+		
+		<tr>
+			<td>{{e.EmpName | title}}</td>
+			<td>{{e.EmpId | title}}</td>
+			<td>{{e.Desg | title}}</td>
+			<td>{{e.Doj | title}}</td>
+			<td>{{e.Dep | title}}</td>
+			<td>{{e.Sal | title}}</td>
+			<td>{{e.Exp | title}}</td>
+			<td><a href="/update/{{ e.id }}">Update</a> | <a href="/delete/{{ e.id }}">Delete</a></td>
+		</tr>
+		
+		{% endfor %}
+	
+	</table>
+
+</center>
+
+<style>
+
+button
+{
+width: 12%;
+border-radius: 12px;
+border-color: #f77f59;
+background-color: #FBDBC6;
+padding: 12px 12px;
+font-size: 12px;
+cursor: pointer;
+text-align: center;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+</style>
+
+<p align="right">
+<a href="/empform"><button>Add Employee</button></a>
+<a href="/hr"><button>Back to HR Manager</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br></br>
+</p>
+
+{%endblock%}

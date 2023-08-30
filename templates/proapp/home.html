@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Project</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+<style>
+  ul {
+  list-style-type: none;
+  margin: -8px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.right{
+  float: right;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #080303;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+
+
+
+{%block body_block%}
+
+<div>
+  <ul>
+    <li><a class="active" href="/home">Home</a></li>
+    <li><a href="/hr">Hr</a></li>
+    <li><a href="/employee">Employee</a></li>
+    <li class="right"><a href="/signup">Sign Up</a></li>
+    <li class="right"><a href="/accounts/logout">Logout</a></li>
+    <li class="right"><a href="/accounts/login">Login</a></li>
+  </ul>
+ 
+</div>
+
+<body background="/static/images/2.jpg">
+  <style>
+    body {
+        background-image: url('/static/images/2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Optional, prevents scrolling */
+    }
+</style>
+
+
+</body>
+
+<center>
+
+  <h1 style="color : rgb(0, 0, 0);">Welcome To Programming World</h1>
+  
+  <h1>
+    <p style="color : rgb(141, 0, 129);">Experience the wolrd of programming with utmost enthusiasm.<br>
+      Take a thrill ride into it.
+    </p>
+  </h1>
+
+</center>
+
+{%endblock%}
+
+</body>
+</html>

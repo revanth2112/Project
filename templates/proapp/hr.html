@@ -1,0 +1,59 @@
+{%extends 'proapp/home.html'%}
+
+{% load static %}
+
+{%block body_block%}
+
+<div>
+  <ul>
+    <li><a href="/home">Home</a></li>
+    <li><a class="active" href="/hr">Hr</a></li>
+    <li><a href="/employee">Employee</a></li>
+    <li class="right"><a href="/signup">Sign Up</a></li>
+    <li class="right"><a href="/accounts/logout">Logout</a></li>
+    <li class="right"><a href="/accounts/login">Login</a></li>
+  </ul>
+</div>
+
+<br>
+<center>
+
+<style>
+
+button
+{
+  width: 21%;
+  border-radius: 12px;
+  border-color: #1b03a3;
+  background-color: #1589ff;
+  padding: 21px 21px;
+  font-size: 21px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+</style>
+
+<br></br>
+<br></br>
+
+<a href="/empform"><button>Add Employee</button></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/empdata"><button>View Employee Data</button></a>
+
+<br></br>
+<br></br>
+
+<a href="/addnews"><button>Add Latest News</button></a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href=""><button>Add Calender</button></a>
+
+</center>
+
+
+{%endblock%}

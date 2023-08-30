@@ -1,0 +1,27 @@
+{%extends 'proapp/home.html'%}
+
+{% load static %}
+
+{%block body_block%}
+
+<center>
+
+	<h2>UPDATE EMPLOYEE INFORMATION</h2>
+	
+	<form method="POST">
+		{%csrf_token%}
+		Emp Name: <input type="text" name="Empname" value="{{employee.EmpName}}"><br>
+		Emp Id: <input type="text" name="EmpId" value="{{employee.EmpId}}"><br>
+		Designation: <input type="text" name="Desg" value="{{employee.Desg}}"><br>
+		Date of Joining : <input type="text" name="Doj" value="{{employee.Doj}}"><br>
+		Department: <input type="text" name="Dep" value="{{employee.Dep}}"><br>
+		Salary: <input type="text" name="Sal" value="{{employee.Sal}}"><br>
+		Experience: <input type="text" name="Exp" value="{{employee.Exp}}"><br>
+
+		<input type="submit" value="UPDATE RECORD">
+	</form>
+
+</center>
+
+
+{%endblock%}

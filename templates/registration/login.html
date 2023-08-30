@@ -1,0 +1,47 @@
+{%extends 'proapp/home.html'%}
+
+{%block body_block%}
+
+<div>
+	<ul>
+	  <li><a href="/home">Home</a></li>
+	  <li><a class="active" href="/hr">Hr</a></li>
+	  <li><a href="/employee">Employee</a></li>
+	  <li class="right"><a href="/signup">Sign Up</a></li>
+	  <li class="right"><a href="/accounts/logout">Logout</a></li>
+	  <li class="right"><a href="/accounts/login">Login</a></li>
+	</ul>
+</div>
+
+<br></br>
+
+<body background="/static/images/3.jpg">
+
+</body>
+
+<style>
+  body {
+      background-image: url('/static/images/3.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed; /* Optional, prevents scrolling */
+  }
+
+.tex {
+	display: block;
+	background-color: #3c3333;
+}
+</style>
+
+<center>
+	<h2 class="tex">HR MANAGER REQUIRED LOGIN TO ENTER HIS SECTION</h2>
+	<br></br>
+	<br></br>	
+	<form method="POST">
+		{%csrf_token%}
+		{{form.as_p}}
+		<button>Login</button>
+	</form>
+</center>
+
+{%endblock%}

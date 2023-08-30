@@ -1,0 +1,15 @@
+{%extends 'proapp/home.html'%}
+
+{%block body_block%}
+
+<center>
+	<h2>SignUp Here</h2>
+
+	<form method="POST">
+		{%csrf_token%}
+        {{form.as_p}}
+		<button>Sign Up</button>
+	</form>
+</center>
+
+{%endblock%}
